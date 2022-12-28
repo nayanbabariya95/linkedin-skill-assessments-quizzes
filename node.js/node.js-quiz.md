@@ -43,7 +43,7 @@
 - [x] createReadStream
 - [ ] readFileSync
 
-**Explanation:** _From official docs: [reference](https://nodejs.org/api/fs.html#fs_dir_read)
+**Explanation:** _From official docs: [reference](https://nodejs.org/api/fs.html#fscreatereadstreampath-options)
 To minimize memory costs, when possible prefer streaming via fs.createReadStream()._
 
 #### Q6. Which of the following DNS module methods uses the underlying OS facilities and does not necessarily perform any network communication?
@@ -466,11 +466,11 @@ fs.appendFile('hello.txt', `Hello ${user} on ${system}`, (err) => { if (err) thr
 #### Q56. Which choice is `not` a Node global object?
 
 - [ ] process
-- [ ] exports
+- [x] exports
 - [ ] setTimeout
-- [x] Buffer
+- [ ] Buffer
 
-**Explanation:** _process, exports and setTimeout are global objects, Buffer isn't (please see https://nodejs.org/api/globals.html)_
+**Explanation:** _`exports` may appear to be global but is not (please see https://nodejs.org/api/globals.html#exports)._
 
 #### Q57. What is the correct way to pipe a readable stream and a writable stream?
 
@@ -596,10 +596,12 @@ console.log(person);
 
 #### Q71. How can ECMAScript modules be used natively in Node?
 
-- [x] ECMAScript modules cannot be used natively in Node.
-- [ ] ECMAScript modules can be used natively in Node with the .mjs file extension
+- [ ] ECMAScript modules cannot be used natively in Node.
+- [x] ECMAScript modules can be used natively in Node with the .mjs file extension
 - [ ] ECMAScript modules can be used natively in Node only by using a compiler like Babel.
 - [ ] ECMAScript modules can be used natively in Node only by using a bundle like webpack.
+
+[Reference](https://nodejs.org/docs/latest/api/packages.html#determining-module-system)
 
 #### Q72. When exploring the Node documentation's features, what are the stability ratings?
 
@@ -654,14 +656,7 @@ console.log(person);
 - [ ] to serve as a module to export dependencies
 - [ ] to be a log for the application
 
-#### Q79. How would you determine the number of cluster instances to start when using the cluster module?
-
-- [ ] `const numInstances = process.cpus().length`
-- [ ] `const numInstances = cluster.instances().length`
-- [ ] `const numInstances = cluster.instances()`
-- [ ] `const numInstances = require('os').cpus().length`
-
-#### Q80. What response will you get when you send a get requests to the server with this code?
+#### Q79. What response will you get when you send a get requests to the server with this code?
 
 ```
 const http = require('http');
@@ -683,3 +678,12 @@ server.listen(port, hostname, () => {
 - [ ] `server running at port 3000`
 - [ ] `server running at http://localhost:3000/`
 - [ ] `server running at http://localhost:4000/`
+
+#### Q80. Which choice is not a Node global object?
+
+- [ ] process
+- [x] exports
+- [ ] setTimeout
+- [ ] Buffer
+
+[Refrence](https://www.w3resource.com/node.js/nodejs-global-object.php#exports)
